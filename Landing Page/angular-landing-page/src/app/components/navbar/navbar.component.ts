@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   showMenu = false;
-  toggleNavbar(){
+  toggleNavbar() {
     this.showMenu = !this.showMenu;
   }
 }

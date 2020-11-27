@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import firebase from 'firebase';
+import {environment} from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,16 @@ import { FooterComponent } from './components/footer/footer.component';
     NavbarComponent,
     FooterComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+constructor() {
+  firebase.initializeApp(environment.firebaseConfig);
+}
+}
