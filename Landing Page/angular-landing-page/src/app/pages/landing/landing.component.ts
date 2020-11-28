@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import firebase from "firebase";
+import firebase from 'firebase';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-landing',
@@ -8,7 +9,7 @@ import firebase from "firebase";
 })
 export class LandingComponent implements OnInit {
  db = firebase.firestore();
-  constructor() { }
+  constructor(private snack: MatSnackBar) { }
 MessageForm: FormGroup;
 
   ngOnInit() {
@@ -22,8 +23,11 @@ this.db.collection('users').add({
   fullName: this.MessageForm.get('fullName').value,
   message: this.MessageForm.get('message').value
 }).catch((error) => {
+  this.snack.open('An error occurred', 'ok');
   console.log('error adding document: ', error);
 });
+this.snack.open('message successfully sent', 'ok', {duration: 3000});
+console.log('message sent');
 this.MessageForm.reset();
   }
 }

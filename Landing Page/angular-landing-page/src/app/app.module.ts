@@ -9,6 +9,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import firebase from 'firebase';
 import {environment} from '../environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import {environment} from '../environments/environment';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+      MatSnackBarModule
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,7 +4,8 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "dist",
+    "site": "arusoweb",
+    "public": "dist/angular-landing-page",
     "ignore": [
       "firebase.json",
       "**/.*",
