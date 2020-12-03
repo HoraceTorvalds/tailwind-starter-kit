@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './pages/landing/landing.component';
@@ -11,6 +11,8 @@ import firebase from 'firebase';
 import {environment} from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 
 @NgModule({
   declarations: [
@@ -23,11 +25,13 @@ import { MatSnackBarModule} from '@angular/material/snack-bar';
         BrowserModule,
         AppRoutingModule,
         ReactiveFormsModule,
-        BrowserAnimationsModule,
+      BrowserAnimationsModule,
+        MDBBootstrapModule.forRoot(),
       MatSnackBarModule
     ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class AppModule {
 constructor() {
