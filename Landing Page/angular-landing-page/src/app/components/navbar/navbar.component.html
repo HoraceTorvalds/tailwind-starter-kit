@@ -24,7 +24,8 @@
 
 
       <button
-        class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+        class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent
+        rounded bg-transparent block lg:hidden outline-none focus:outline-none"
         type="button"
         (click)="toggleNavbar()"
       >
@@ -32,7 +33,7 @@
       </button>
     </div>
     <div
-      class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none"
+      class="lg:flex flex-grow items-center bg-white lg:bg-transparent rounded shadow lg:shadow-none"
       [ngClass]="{'hidden': !showMenu, 'block': showMenu}"
     >
 <!--      <ul class="flex flex-col lg:flex-row list-none mr-auto">-->
@@ -51,10 +52,9 @@
         <li class="flex items-center">
           <a
             class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-            href="#"
+            routerLink="/landing"
             ><span
-              class="lg:text-gray-300 text-gray-500 fab  text-sm leading-lg "
-            >Home</span
+              class="lg:text-gray-300 text-gray-700 fab  text-sm leading-lg ">Home</span
             >
 <!--            <span class="lg:hidden inline-block ml-2">Share</span>-->
           </a
@@ -63,35 +63,34 @@
         <li class="flex items-center">
           <a
             class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-            href="#about"
+            href="#About"
             ><span
-              class="lg:text-gray-300 text-gray-500 fab  text-sm leading-lg "
+              class="lg:text-gray-300 text-gray-700 fab  text-sm leading-lg "
             >About</span
             >
 <!--            <span class="lg:hidden inline-block ml-2">Tweet</span>-->
-          </a
-          >
+          </a>
         </li>
         <li class="flex items-center">
           <a
             class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-            href="#leaders"
+            routerLink="/leaders"
             ><span
-              class="lg:text-gray-300 text-gray-500 fab  text-sm leading-lg "
+              class="lg:text-gray-300  text-gray-700 fab text-sm leading-lg "
             >Leaders</span
             >
 <!--            <span class="lg:hidden inline-block ml-2">Star</span>-->
-          </a
-          >
+          </a>
         </li>
-        <li class="flex items-center">
+        <li  class="flex items-center">
+          <a href="#messageUs">
           <button
             class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
-            type="button" (click)="openSnack()"
+            type="button"
             style="transition: all 0.15s ease 0s;"
-          ><a href="#message"></a>
+          >
             <i class="fas fa-envelope"></i> Message Us
-          </button>
+          </button></a>
         </li>
       </ul>
     </div>

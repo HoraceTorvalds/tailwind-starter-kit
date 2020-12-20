@@ -1,24 +1,25 @@
-<app-navbar></app-navbar>
+<app-navbar (click)="navigate($event)"></app-navbar>
 <main>
+
   <div
     class="relative pt-16 pb-32 flex content-center items-center justify-center"
     style="min-height: 75vh;"
   >
     <div
       class="absolute top-0 w-full h-full bg-center bg-cover"
-      style='background-image: url("../../../assets/img/photo_2020-10-15_01-04-00.jpg");'
+      style='background-image: url("./assets/img/photo_2020-10-15_01-04-00.jpg");'
     >
       <span
         id="blackOverlay"
-        class="w-full h-full absolute opacity-75 bg-black"
-      ></span>
+        class="w-full h-full absolute opacity-75 bg-black">
+      </span>
     </div>
     <div class="container relative mx-auto">
       <div class="items-center flex flex-wrap">
         <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
           <div class="pr-12">
             <h1 class="text-white font-semibold text-5xl">
-              Ardhi University Student Government
+              Ardhi University Student Organization
             </h1>
             <p class="mt-4 text-lg text-gray-300">
 
@@ -58,13 +59,16 @@
           >
             <div class="px-4 py-5 flex-auto">
               <div
-                class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"
+                class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg
+                rounded-full " style="background-color: #FF4081"
               >
                 <i class="fas fa-sun"></i>
               </div>
-              <h6 class="text-xl font-semibold">Make Aru Great Again</h6>
+              <h6 class="text-xl font-semibold">ARDHI University Vision</h6>
               <p class="mt-2 mb-4 text-gray-600">
-       We are aiming at specifying our goals into Ministerial Work plans, clear purpose, measurable success and meeting deadlines.
+                To be a leading centre of excellence in knowledge generation and dissemination
+                responsive to the dynamics of the national,
+                regional and global conditions
 
       </p>
             </div>
@@ -75,15 +79,16 @@
             class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
           >
             <div class="px-4 py-5 flex-auto">
+              <a href="#messageUs">
               <div
                 class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400"
               >
                 <i class="fas fa-sun"></i>
-              </div>
-              <h6 class="text-xl font-semibold">second motto/policy</h6>
+              </div></a>
+              <h6 class="text-xl font-semibold">Right time for the right changes</h6>
               <p class="mt-2 mb-4 text-gray-600">
-            W also are aiming to see that all students <br>at Ardhi university prosper and recognize their true potential while
-            here.
+                I present before you, with a belief and a clear intent to serve my fellow students as the PRESIDENT of ARUSO so as to make the right
+                changes that will take us to the peak of our dream careers and social-wise.
               </p>
             </div>
           </div>
@@ -98,16 +103,16 @@
               >
                 <i class="fas fa-sun"></i>
               </div>
-              <h6 class="text-xl font-semibold">Right time for right changes</h6>
+              <h6 class="text-xl font-semibold">Make ARU Great Again</h6>
               <p class="mt-2 mb-4 text-gray-600">
-            Our  vision it to see that all students<br> at Ardhi university are highly given their due rights as they undergo<br>
-            their studies without undermining ANY.
+                We are aiming at specifying our goals into ministerial work plans,
+                clear purpose, measurable success and meeting deadlines.
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div class="flex flex-wrap items-center mt-32" #about>
+      <div class="flex flex-wrap items-center mt-32">
         <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
           <div
             class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100"
@@ -131,9 +136,9 @@
           </p>
           <!-- <p class="font-bold text-gray-800 mt-8">Location and date  </p> -->
         </div>
-        <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
+        <div class="w-full md:w-4/12 px-4 mr-auto ml-auto" id="About" #About>
           <div
-            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600"
+            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg" style="background-color: #FF4081"
           >
             <img
               alt="..."
@@ -150,7 +155,7 @@
               >
                 <polygon
                   points="-30,95 583,95 583,65"
-                  class="text-pink-600 fill-current"
+                  class=" fill-current" style="color: #FF4081"
                 ></polygon>
               </svg>
               <h4 class="text-xl font-bold text-white">
@@ -188,8 +193,12 @@
         ></polygon>
       </svg>
     </div>
-    <div class="container mx-auto px-4">
-      <div class="items-center flex flex-wrap">
+
+<!--    Achievement components-->
+
+<!--    Achievement one-->
+    <div class="container mx-auto px-4 ">
+      <div class="items-center flex flex-wrap mb-12">
         <div class="w-full md:w-4/12 ml-auto mr-auto px-4">
           <img
             alt="..."
@@ -197,21 +206,21 @@
             src="../../../assets/img/photo_2020-10-15_01-03-58 (3).jpg"
           />
         </div>
-        <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
+        <div class="w-full md:w-5/12 ml-auto mr-auto px-4 ">
           <div class="md:pr-12">
             <div
-              class="text-blue-500  p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-blue-200"
+              class="text-blue-500  p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 mt-8 shadow-lg rounded-full bg-blue-200"
             >
               <i class="fas fa-rocket text-xl"></i>
             </div>
-            <h3 class="text-3xl font-semibold">leadership Achievement so far</h3>
+            <h3 class="text-3xl font-semibold">First achievement</h3>
             <p class="mt-4 text-lg leading-relaxed text-gray-600">
          We have managed to Strengthen  our relationship with NMB BANK PLC inorder
          to make sure that the Student’s of Ardhi University are ensured with Good financial
          Services  in areas such as Mwanachuo Account , Health Insurance , Disastors and many other Services
          which touch Day to day life of a University Student.
             </p>
-            <ul class="list-none mt-6">
+            <ul class="list-none mt-6 ">
               <li class="py-2">
                 <div class="flex items-center">
                    <div>
@@ -254,12 +263,23 @@
 <!--                </div>-->
 <!--              </li>-->
             </ul>
+
           </div>
+          <button class="mt-12">
+          <a routerLink="/achievement" class="onlarge-screen onsmall-screen"> view more
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          </button>
         </div>
+
       </div>
+
+
     </div>
+
+
   </section>
-  <section class="pt-20 pb-48">
+  <section class="pt-18 pb-48">
     <div class="container mx-auto px-4" #leaders>
       <div class="flex flex-wrap justify-center text-center mb-24">
         <div class="w-full lg:w-6/12 px-4">
@@ -286,17 +306,20 @@
                 President
               </p>
               <div class="mt-6">
+                <a href="tel:+255-716736160">
                 <button
-                  class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                  type="button"
-                >
-                  <i class="fab fa-twitter"></i></button
-                ><button
                   class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                   type="button"
                 >
-                  <i class="fab fa-facebook-f"></i></button
+                  <i class="fas fa-phone-alt"></i>
+                </button></a>
+                <a href="mailto:fredy.masika@gmail.com">
+                <button
+                  class=" text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                  type="button" style="background-color: #FF4081"
                 >
+                  <i class="fas fa-envelope"></i></button
+                ></a>
 <!--                <button-->
 <!--                  class="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"-->
 <!--                  type="button"-->
@@ -321,17 +344,20 @@
                 Vice President
               </p>
               <div class="mt-6">
+                <a href="tel:+255-787576419">
                 <button
-                  class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                  type="button"
-                >
-                  <i class="fab fa-google"></i></button
-                ><button
                   class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                   type="button"
                 >
-                  <i class="fab fa-facebook-f"></i>
-                </button>
+                  <i class="fas fa-phone-alt"></i></button
+                ></a>
+                <a href="mailto:philbertpaul@gmail.com">
+                <button
+                  class="text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                  type="button" style="background-color: #FF4081"
+                >
+                  <i class="fas fa-envelope"></i>
+                </button></a>
               </div>
             </div>
           </div>
@@ -350,22 +376,26 @@
                Prime Minister
               </p>
               <div class="mt-6">
+                <a href="tel:+255-xxxxxxxxx">
                 <button
-                  class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                  class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                   type="button"
                 >
-                  <i class="fab fa-google"></i></button
-                ><button
-                  class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                  type="button"
+                  <i class="fas fa-phone-alt"></i></button
+                ></a>
+                <a href="mailto:email@gmail.com">
+                <button
+                  class=" text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                  type="button" style="background-color: #FF4081"
                 >
-                  <i class="fab fa-twitter"></i></button
-                ><button
-                  class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                  type="button"
-                >
-                  <i class="fab fa-instagram"></i>
-                </button>
+                  <i class="fa fa-envelope"></i></button
+                ></a>
+<!--                <button-->
+<!--                  class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"-->
+<!--                  type="button"-->
+<!--                >-->
+<!--                  <i class="fab fa-instagram"></i>-->
+<!--                </button>-->
               </div>
             </div>
           </div>
@@ -390,22 +420,26 @@
 <!--                >-->
 <!--                  <i class="fab fa-dribbble"></i></button-->
 <!--                >-->
+                <a href="tel:+255- xxxxx">
                 <button
-                  class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                  class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                   type="button"
                 >
-                  <i class="fab fa-google"></i></button
-                ><button
-                  class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                  type="button"
+                  <i class="fas fa-phone-alt"></i></button
+                ></a>
+                <a href="mailto:example@gmail.com">
+                <button
+                  class=" text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                  type="button" style="background-color: #FF4081"
                 >
-                  <i class="fab fa-twitter"></i></button
-                ><button
-                  class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                  type="button"
-                >
-                  <i class="fab fa-instagram"></i>
-                </button>
+                  <i class="fas fa-envelope"></i></button
+                ></a>
+<!--                <button-->
+<!--                  class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"-->
+<!--                  type="button"-->
+<!--                >-->
+<!--                  <i class="fab fa-instagram"></i>-->
+<!--                </button>-->
               </div>
             </div>
           </div>
@@ -413,7 +447,7 @@
       </div>
     </div>
   </section>
-  <section class="pb-20 relative block bg-gray-900">
+  <section class="pb-20 relative block bg-gray-900" id="messageUs">
     <div
       class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
       style="height: 80px; transform: translateZ(0px);"
@@ -488,7 +522,7 @@
   </section>
   <section class="relative block py-24 lg:pt-0 bg-gray-900">
     <div class="container mx-auto px-4">
-      <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48" #message>
+      <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
         <div class="w-full lg:w-6/12 px-4">
           <div
             class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300"
@@ -502,26 +536,26 @@
                 <label
                   class="block uppercase text-gray-700 text-xs font-bold mb-2"
                   for="full-name"
-                  >Full Name</label
+                  >Name</label
                 ><input
                   type="text" id="full-name"
                   class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
-                  placeholder="Full Name" formControlName="fullName"
+                  placeholder="Name" formControlName="fullName"
                   style="transition: all 0.15s ease 0s;"
                 />
               </div>
-<!--              <div class="relative w-full mb-3">-->
-<!--                <label-->
-<!--                  class="block uppercase text-gray-700 text-xs font-bold mb-2"-->
-<!--                  for="email"-->
-<!--                  >Email</label-->
-<!--                ><input-->
-<!--                  type="email"-->
-<!--                  class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"-->
-<!--                  placeholder="Email"-->
-<!--                  style="transition: all 0.15s ease 0s;"-->
-<!--                />-->
-<!--              </div>-->
+              <div class="relative w-full mb-3">
+                <label
+                  class="block uppercase text-gray-700 text-xs font-bold mb-2"
+                  for="email"
+                  >Email</label
+                ><input
+                  type="email" id="email"
+                  class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                  placeholder="Email" formControlName="email"
+                  style="transition: all 0.15s ease 0s;"
+                />
+              </div>
               <div class="relative w-full mb-3">
                 <label
                   class="block uppercase text-gray-700 text-xs font-bold mb-2"
